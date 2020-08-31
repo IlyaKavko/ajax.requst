@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+      integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <form class="form-inline" action="./form.php" method="POST">
+      <div class="form-group">
+        <label class="col-form-label" for="test"
+          >Показать товары, у которых</label
+        >
+        <select class="form-control" name="price" id="test">
+          <option value="retail_price">Розничная цена</option>
+          <option value="wholesale_price">Оптовая</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="test">от</label>
+        <input
+          class="form-control"
+          type="number"
+          name="sell"
+          min="100"
+          max="300000"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="test">до</label>
+        <input
+          class="form-control"
+          type="number"
+          name="sellTWO"
+          min="100"
+          max="300000"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="test">рублей и на складе</label>
+        <select class="form-control" name="selectTWO">
+          <option value="more">Более</option>
+          <option value="less">Мение</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="number"
+          name="quantity"
+          min="1"
+          max="1000"
+        />
+        <label class="col-form-label" for="test">шт</label>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">ПОКАЗАТЬ ТОВАРЫ</button>
+    </form>
+
+    <div class="result">Результат</div>
+
+    <script src="./js/jqury.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
